@@ -1,3 +1,3 @@
 # Challenges
 
-1. [Reverse an Array](/reverseAnArray)
+1. [Reverse an Array](/Challenges/reverseAnArray)
