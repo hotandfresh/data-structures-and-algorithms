@@ -15,4 +15,6 @@ The space efficiency for this solution is O(N) because the entire array needs to
 
 ## Solution
 
+[See the code](/src/main/java/Challenges/ArrayShift.java)
+
 ![shift array picture](/assets/shiftArray.png)
