@@ -2,6 +2,11 @@
 
 This repo is a collection of data structures and algorithms
 
-1. [Challenges](/Challenges)
-2. [Data Structures](/DataStructures)
-3. [Sorting Algorithms](/SortingAlgos)
+## Challenges
+1. [Reverse An Array](Challenges/ReverseArray.md)
+2. [Array Shift](Challenges/ArrayShift.md)
+
+## Data Structures
+
+## Sorting Algorithms
+
