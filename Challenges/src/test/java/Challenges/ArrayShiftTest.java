@@ -18,13 +18,37 @@ public class ArrayShiftTest{
     }
 
     @Test
+    public void emptyArray(){
+        int[] arr = {};
+        int val = 5;
+
+        int[] expected = {5};
+
+        ArrayShift classUnderTest = new ArrayShift();
+        assertArrayEquals("5 should be the only number", classUnderTest.ShiftArray(arr, val), expected);
+
+    }
+
+    @Test
+    public void arrayOneNumber(){
+        int[] arr = {6};
+        int val = 5;
+
+        int[] expected = {6,5};
+
+        ArrayShift classUnderTest = new ArrayShift();
+        assertArrayEquals("5 should be after 6", classUnderTest.ShiftArray(arr, val), expected);
+
+    }
+
+    @Test
     public void oddArray(){
         int[] arr = {4, 8, 15, 23, 42};
         int val = 16;
 
-        int[] result = ArrayShift.ShiftArray(arr, val);
         int[] expected = {4, 8, 15, 16, 23, 42};
 
-        assertEquals(expected, result);
+        ArrayShift classUnderTest = new ArrayShift();
+        assertArrayEquals("16 should be inserted in the middle", classUnderTest.ShiftArray(arr, val), expected);
     }
 }
