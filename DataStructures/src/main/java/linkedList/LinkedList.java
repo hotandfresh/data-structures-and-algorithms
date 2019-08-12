@@ -37,13 +37,17 @@ public class LinkedList {
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
+        //set a pointer to start at head
+        current = head;
+
         //keep traversing if where we are is not null
         while(current != null){
             //keep appending the values
-            sb.append(current.data + "-");
+            sb.append(current.data + " ");
             //move the current pointer to the next node
             current = current.next;
         }
+
         return sb.toString();
     }
 }
