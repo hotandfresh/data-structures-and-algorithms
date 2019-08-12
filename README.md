@@ -8,6 +8,7 @@ This repo is a collection of data structures and algorithms
 2. [Binary Search of a 1D Array](Challenges/BinarySearchOfAnArray.md)
 
 ## Data Structures
+1. [Linked Lists](DataStructures/LinkedList.md)
 
 ## Sorting Algorithms
 
