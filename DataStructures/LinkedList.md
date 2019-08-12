@@ -4,6 +4,9 @@
 
 Implement a linked list data structure.  The linked list implemented here consists of Nodes.  Nodes hold a value of integers and has a pointer to the next node.
 
+[See the Code](src/main/java/linkedList/LinkedList.java)
+[See the Tests](src/test/java/linkedList/LinkedListTest.java)
+
 ---
 
 ## API
