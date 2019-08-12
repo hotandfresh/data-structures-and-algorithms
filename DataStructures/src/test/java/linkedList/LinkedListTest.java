@@ -58,7 +58,6 @@ public class LinkedListTest {
         assertTrue(total == 5);
     }
 
-    //    Will return true when finding a value within the linked list that exists
     @Test
     public void canFindValueInLL(){
         LinkedList newLL = new LinkedList();
@@ -71,7 +70,6 @@ public class LinkedListTest {
         assertTrue(newLL.includes(101));
     }
 
-    //    Will return false when searching for a value in the linked list that does not exist
     @Test
     public void canFindIfValueIsNotInLL(){
         LinkedList newLL = new LinkedList();
@@ -84,7 +82,6 @@ public class LinkedListTest {
         assertFalse(newLL.includes(666));
     }
 
-    //    Can properly return a collection of all the values that exist in the linked list
     @Test
     public void canPrintAllValuesInLL(){
         LinkedList newLL = new LinkedList();
