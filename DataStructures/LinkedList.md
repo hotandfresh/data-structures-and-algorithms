@@ -44,4 +44,4 @@ Since all Nodes must be traversed, the time complexity is O(N).  No space is use
 
 ## Acknowledgements
 
-The code was written with help from the [HackerRank tutorial on Linked List](https://www.youtube.com/watch?v=njTh_OwMljA&t=338s).
+The append and insert methods were written with help from the [HackerRank tutorial on Linked List](https://www.youtube.com/watch?v=njTh_OwMljA&t=338s).

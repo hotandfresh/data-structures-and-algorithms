@@ -8,7 +8,7 @@ public class LinkedListTest {
 
     @Test
     public void canInstantiateEmptyLL(){
-        LinkedList newLL = new LinkedList();
+        LinkedList<Integer> newLL = new LinkedList<>();
 
         //the head of an empty linkedList will be null
         assertTrue(newLL.head == null);
@@ -16,17 +16,17 @@ public class LinkedListTest {
 
     @Test
     public void canInsertIntoLL(){
-        LinkedList newLL = new LinkedList();
+        LinkedList<Integer> newLL = new LinkedList<>();
         newLL.insert(10);
 
         //if the LL is only 1 Node long, that Node will be the head
-        assertTrue(newLL.head.data == 10);
+        assertTrue(newLL.head.data.equals(10));
 
     }
 
     @Test
     public void headPointsToFirstNode(){
-        LinkedList newLL = new LinkedList();
+        LinkedList<Integer> newLL = new LinkedList<>();
         newLL.insert(10);
         newLL.insert(1);
         newLL.insert(110);
@@ -35,12 +35,12 @@ public class LinkedListTest {
         //since this is the last value added, it'll be the head:
         newLL.insert(101);
 
-        assertTrue(newLL.head.data == 101);
+        assertTrue(newLL.head.data.equals(101));
     }
 
     @Test
     public void canInsertMultipleNodes(){
-        LinkedList newLL = new LinkedList();
+        LinkedList<Integer> newLL = new LinkedList<>();
         newLL.insert(10);
         newLL.insert(1);
         newLL.insert(110);
@@ -60,7 +60,7 @@ public class LinkedListTest {
 
     @Test
     public void canFindValueInLL(){
-        LinkedList newLL = new LinkedList();
+        LinkedList<Integer> newLL = new LinkedList<>();
         newLL.insert(10);
         newLL.insert(1);
         newLL.insert(110);
@@ -72,7 +72,7 @@ public class LinkedListTest {
 
     @Test
     public void canFindIfValueIsNotInLL(){
-        LinkedList newLL = new LinkedList();
+        LinkedList<Integer> newLL = new LinkedList<>();
         newLL.insert(10);
         newLL.insert(1);
         newLL.insert(110);
@@ -84,7 +84,7 @@ public class LinkedListTest {
 
     @Test
     public void canPrintAllValuesInLL(){
-        LinkedList newLL = new LinkedList();
+        LinkedList<Integer> newLL = new LinkedList<>();
         newLL.insert(10);
         newLL.insert(1);
         newLL.insert(110);
@@ -93,5 +93,39 @@ public class LinkedListTest {
 
         String result = newLL.toString();
         assertEquals("101 1011 110 1 10 ", result);
+    }
+
+    @Test
+    public void canAppend(){
+        LinkedList<Integer> newLL = new LinkedList<>();
+        //This value will be the head value:
+        newLL.append(10);
+
+        //These will be the nodes after the head
+        newLL.append(1);
+        newLL.append(110);
+        newLL.append(1011);
+        newLL.append(101);
+
+        assertTrue(newLL.head.data.equals(10));
+    }
+
+    @Test
+    public void canInsertBefore(){
+        LinkedList<Integer> newLL = new LinkedList<>();
+        newLL.append(10);
+        newLL.append(1);
+        newLL.append(110);
+        newLL.append(1011);
+        newLL.append(101);
+
+        newLL.insertBefore(666, 1);
+        String result = newLL.toString();
+        assertEquals("10 666 1 110 1011 101 ", result);
+    }
+
+    @Test
+    public void canInsertAfter(){
+        
     }
 }
