@@ -39,3 +39,9 @@ The time complexity is O(N) because the last Node might be the one with the valu
 This method prints all the values in the linked list.  It takes in no arguments.
 
 Since all Nodes must be traversed, the time complexity is O(N).  No space is used for this method, so space complexity is O(1).
+
+---
+
+## Acknowledgements
+
+The code was written with help from the [HackerRank tutorial on Linked List](https://www.youtube.com/watch?v=njTh_OwMljA&t=338s).
