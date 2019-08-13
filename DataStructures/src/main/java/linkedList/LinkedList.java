@@ -33,16 +33,22 @@ public class LinkedList<T> {
         head = newHead;
     }
 
-    //insert before
+    //inserts data before valueToFind
     public void insertBefore(T data, T valueToFind){
-        //insert before into an empty list
-        if(head == null) {
+        //insert into an empty list
+        if(head.data == null) {
             head = new Node(data);
             return;
         }
+        //if the valueToFind is the head, call insert to append before
+        if(head.data.equals(valueToFind)) {
+            insert(data);
+            return;
+        }
+
         current = head;
-        while(current.next != null){
-            if(current.next.data.equals((valueToFind))){
+        while(current.next != null) {
+            if (current.next.data.equals((valueToFind))) {
                 Node newNode = new Node(data);
                 newNode.next = current.next;
                 current.next = newNode;
@@ -52,8 +58,24 @@ public class LinkedList<T> {
         }
     }
 
+    //insert data after valueToFind
+    public void insertAfter(T data, T valueToFind){
+        //insert into an empty list
+        if(head == null) {
+            head = new Node(data);
+            return;
+        }
 
-    //insert after
+        current = head;
+        while(current != null){
+            if(current.data.equals(valueToFind)){
+                Node newNode = new Node(data);
+                newNode.next = current.next;
+                current.next = newNode;
+            }
+            current = current.next;
+        }
+    }
 
     //includes - returns boolean depending on whether that value exists or not
     public boolean includes(T val){

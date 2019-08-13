@@ -14,6 +14,9 @@ Implement a linked list data structure.  The linked list implemented here consis
 
 The methods created include:
 ### insert
+### insertBefore
+### insertAfter
+### append
 ### includes
 ### toString
 
@@ -27,6 +30,18 @@ This method takes in a value and inserts that value at the beginning of the link
 
 Therefore, its time complexity is O(1).  Space is consistent at O(1) as well.
 
+### insertBefore -
+
+This method takes in 2 parameters, a value and a valueToFind in the linked list.  The value is added before the valueToFind.
+
+### insertAfter - 
+
+This method takes in 2 parameters, a value and a valueToFind in the linked list.  The value is added after the valueToFind.
+
+### append - 
+
+This method takes in a value and adds it to the end of the list.
+
 ### includes - 
 
 This method takes in a value and checks if that value exists in the linked list.  Since indexing is not a feature of linked lists, every node must be visited to see if it holds the value being searched.  If the value is found, a true is returned.  Otherwise, a false is returned at the very end if the value is not found.
@@ -39,6 +54,11 @@ The time complexity is O(N) because the last Node might be the one with the valu
 This method prints all the values in the linked list.  It takes in no arguments.
 
 Since all Nodes must be traversed, the time complexity is O(N).  No space is used for this method, so space complexity is O(1).
+
+---
+
+## Solution
+![Linked Lists Insert Methods](/assets/LLMethods.png)
 
 ---
 

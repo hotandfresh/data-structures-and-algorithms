@@ -119,13 +119,22 @@ public class LinkedListTest {
         newLL.append(1011);
         newLL.append(101);
 
-        newLL.insertBefore(666, 1);
+        newLL.insertBefore(666, 10);
         String result = newLL.toString();
-        assertEquals("10 666 1 110 1011 101 ", result);
+        assertEquals("666 10 1 110 1011 101 ", result);
     }
 
     @Test
     public void canInsertAfter(){
-        
+        LinkedList<Integer> newLL = new LinkedList<>();
+        newLL.append(10);
+        newLL.append(1);
+        newLL.append(110);
+        newLL.append(1011);
+        newLL.append(101);
+
+        newLL.insertAfter(666, 101);
+        String result = newLL.toString();
+        assertEquals("10 1 110 1011 101 666 ", result);
     }
 }
