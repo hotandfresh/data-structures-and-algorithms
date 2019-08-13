@@ -14,6 +14,9 @@ Implement a linked list data structure.  The linked list implemented here consis
 
 The methods created include:
 ### insert
+### insertBefore
+### insertAfter
+### append
 ### includes
 ### toString
 
@@ -26,6 +29,18 @@ The methods created include:
 This method takes in a value and inserts that value at the beginning of the linked list.  
 
 Therefore, its time complexity is O(1).  Space is consistent at O(1) as well.
+
+### insertBefore -
+
+This method takes in 2 parameters, a value and a valueToFind in the linked list.  The value is added before the valueToFind.
+
+### insertAfter - 
+
+This method takes in 2 parameters, a value and a valueToFind in the linked list.  The value is added after the valueToFind.
+
+### append - 
+
+This method takes in a value and adds it to the end of the list.
 
 ### includes - 
 
@@ -42,6 +57,11 @@ Since all Nodes must be traversed, the time complexity is O(N).  No space is use
 
 ---
 
+## Solution
+![Linked Lists Insert Methods](/assets/LLMethods.png)
+
+---
+
 ## Acknowledgements
 
-The code was written with help from the [HackerRank tutorial on Linked List](https://www.youtube.com/watch?v=njTh_OwMljA&t=338s).
+The append and insert methods were written with help from the [HackerRank tutorial on Linked List](https://www.youtube.com/watch?v=njTh_OwMljA&t=338s).
