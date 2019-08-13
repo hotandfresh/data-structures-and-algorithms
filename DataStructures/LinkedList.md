@@ -26,21 +26,19 @@ The methods created include:
 
 ### insert - 
 
-This method takes in a value and inserts that value at the beginning of the linked list.  
-
-Therefore, its time complexity is O(1).  Space is consistent at O(1) as well.
+This method takes in a value and inserts that value at the beginning of the linked list.  Therefore, its time complexity is O(1).  Space is consistent at O(1) as well.
 
 ### insertBefore -
 
-This method takes in 2 parameters, a value and a valueToFind in the linked list.  The value is added before the valueToFind.
+This method takes in 2 parameters, a value and a valueToFind in the linked list.  The value is added before the valueToFind.  Time complexity is O(N) because the entire linked list could be traversed if that valueToFind is at the end.  Space Complexity is O(1) because no extra space is need to solve the problem.
 
 ### insertAfter - 
 
-This method takes in 2 parameters, a value and a valueToFind in the linked list.  The value is added after the valueToFind.
+This method takes in 2 parameters, a value and a valueToFind in the linked list.  The value is added after the valueToFind.  Time complexity is O(N) because the entire linked list could be traversed if that valueToFind is at the end.  Space Complexity is O(1) because no extra space is need to solve the problem.
 
 ### append - 
 
-This method takes in a value and adds it to the end of the list.
+This method takes in a value and adds it to the end of the list.  Time complexity is O(N) because the entire linked list is traversed in order to add to the end.  Space Complexity is O(1) because no extra space is need to solve the problem.
 
 ### includes - 
 
