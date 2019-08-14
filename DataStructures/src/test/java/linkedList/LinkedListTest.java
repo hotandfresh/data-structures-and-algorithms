@@ -137,4 +137,20 @@ public class LinkedListTest {
         String result = newLL.toString();
         assertEquals("10 1 110 1011 101 666 ", result);
     }
+
+    @Test
+    public void canFindKthElementThatExists(){
+        LinkedList<Integer> newLL = new LinkedList<>();
+        newLL.append(10);
+        newLL.append(1);
+        newLL.append(110);
+        newLL.append(1011);
+        newLL.append(101);
+
+        int actual = newLL.kthFromEnd(3);
+        assertEquals(110, actual);
+    }
+
+    
+
 }
