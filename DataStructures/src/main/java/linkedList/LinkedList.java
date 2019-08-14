@@ -4,6 +4,34 @@ public class LinkedList<T> {
     public Node <T> head;
     public Node <T> current;
 
+    //Finds the Kth element from the end of a LL
+    public T kthFromEnd(int k){
+        int llLength = 0;
+        current = head;
+
+        while(current != null){
+            llLength++;
+            current = current.next;
+        }
+
+        if(k > llLength || k < 0){
+
+            throw new IndexOutOfBoundsException();
+        }
+
+        current = head;
+
+        if(k == llLength){
+            return current.data;
+        }
+
+        for(int i = 0; i <= llLength - k; i++){
+            current = current.next;
+        }
+
+        return current.data;
+    }
+
     //append to the end of a list
     public void append(T data){
         if(head == null) {
