@@ -151,6 +151,48 @@ public class LinkedListTest {
         assertEquals(110, actual);
     }
 
-    
+    @Test
+    public void canFindKthElementInLLLengthOne(){
+        LinkedList<Integer> newLL = new LinkedList<>();
+        newLL.append(10);
+        int actual = newLL.kthFromEnd(1);
+        assertEquals(10, actual);
+    }
 
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void KthElementWhereKIsNotPositive(){
+        LinkedList<Integer> newLL = new LinkedList<>();
+        newLL.append(10);
+        newLL.append(1);
+        newLL.append(110);
+        newLL.append(1011);
+        newLL.append(101);
+
+        int actual = newLL.kthFromEnd(-3);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void KthElementWhereKIsGreaterThanLength(){
+        LinkedList<Integer> newLL = new LinkedList<>();
+        newLL.append(10);
+        newLL.append(1);
+        newLL.append(110);
+        newLL.append(1011);
+        newLL.append(101);
+
+        int actual = newLL.kthFromEnd(666);
+    }
+
+    @Test
+    public void KthElementWhereKIsSameAsLength(){
+        LinkedList<Integer> newLL = new LinkedList<>();
+        newLL.append(10);
+        newLL.append(1);
+        newLL.append(110);
+        newLL.append(1011);
+        newLL.append(101);
+
+        int actual = newLL.kthFromEnd(5);
+        assertEquals(10, actual);
+    }
 }

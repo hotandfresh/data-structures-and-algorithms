@@ -14,13 +14,18 @@ public class LinkedList<T> {
             current = current.next;
         }
 
-        if(k > llLength){
-            throw new NullPointerException();
+        if(k > llLength || k < 0){
+
+            throw new IndexOutOfBoundsException();
         }
 
         current = head;
 
-        for(int i = 0; i < llLength - k; i++){
+        if(k == llLength){
+            return current.data;
+        }
+
+        for(int i = 0; i <= llLength - k; i++){
             current = current.next;
         }
 
