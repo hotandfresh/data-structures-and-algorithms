@@ -3,6 +3,10 @@
 # Summary
 Given a value k, find the element at the kth index in a linked list.
 
+[See the Code](src/main/java/linkedList/LinkedList.java)
+
+[See the Tests](src/test/java/linkedList/LinkedListTest.java)
+
 ## Description
 This solution uses a loop to find the length of the given linked list.  It then uses another loop to traverse up to that point and returns the element at the Kth index from the end.
 
