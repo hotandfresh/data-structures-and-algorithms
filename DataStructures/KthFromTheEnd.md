@@ -10,7 +10,7 @@ This solution uses a loop to find the length of the given linked list.  It then 
 Time complexity is O(N) and space complexity is O(1).
 
 ## Solution
-![Kth Element From End](/assets/KthFromTheEnd.md)
+![Kth Element From End](/assets/kthFromEnd.png)
 
 ## Resources
 Help for figuring out how to test exceptions was from [here](https://stackoverflow.com/questions/156503/how-do-you-assert-that-a-certain-exception-is-thrown-in-junit-4-tests)
