@@ -65,7 +65,7 @@ public class LinkedList<T> {
             return current.data;
         }
 
-        for(int i = 0; i <= llLength - k; i++){
+        for(int i = 1; i <= llLength - k; i++){
             current = current.next;
         }
 
