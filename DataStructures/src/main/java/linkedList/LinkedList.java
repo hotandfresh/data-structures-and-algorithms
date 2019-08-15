@@ -30,7 +30,16 @@ public class LinkedList<T> {
             runner2 = currentTwo.next;
         }
 
-        currentOne.next = currentTwo;
+        if(runner1 != null && runner2 == null){
+            //if LLone is longer
+            currentOne.next = currentTwo;
+            currentOne = currentOne.next;
+            currentOne.next = runner1;
+
+        } else {
+            //happy path and if LLtwo is longer
+            currentOne.next = currentTwo;
+        }
 
         return one;
     }
