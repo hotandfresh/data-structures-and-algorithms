@@ -209,11 +209,11 @@ public class LinkedListTest {
         two.append(6);
 
         LinkedList<Integer> result = LinkedList.mergeLists(one, two);
-        System.out.println(result);
+        assertEquals("1 2 3 4 5 6 ", result.toString());
     }
 
-    @Test(expected = NullPointerException.class)
-    public void canMergeUnevenLL(){
+    @Test
+    public void canMerge2LLWhereLLOneIsLonger(){
         LinkedList<Integer> one = new LinkedList<>();
         one.append(1);
         one.append(3);
@@ -224,7 +224,48 @@ public class LinkedListTest {
         two.append(4);
 
         LinkedList<Integer> result = LinkedList.mergeLists(one, two);
-        System.out.println(result);
+        assertEquals("1 2 3 4 5 ", result.toString());
+    }
+
+
+    @Test
+    public void canMerge2LLWhereLLTwoIsLonger(){
+        LinkedList<Integer> one = new LinkedList<>();
+        one.append(1);
+        one.append(3);
+        one.append(5);
+
+        LinkedList<Integer> two = new LinkedList<>();
+        two.append(2);
+        two.append(4);
+        two.append(6);
+        two.append(8);
+
+        LinkedList<Integer> result = LinkedList.mergeLists(one, two);
+        assertEquals("1 2 3 4 5 6 8 ", result.toString());
+    }
+
+    @Test
+    public void canMerge2LLWhereOnlyOneLLExists(){
+        LinkedList<Integer> one = new LinkedList<>();
+        one.append(1);
+        one.append(3);
+        one.append(5);
+
+        LinkedList<Integer> two = new LinkedList<>();
+
+        LinkedList<Integer> result = LinkedList.mergeLists(one, two);
+        assertEquals("1 3 5 ", result.toString());
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void cannotMergeEmptyLL(){
+        LinkedList<Integer> one = new LinkedList<>();
+
+        LinkedList<Integer> two = new LinkedList<>();
+
+        LinkedList<Integer> result = LinkedList.mergeLists(one, two);
+
     }
 
 }
