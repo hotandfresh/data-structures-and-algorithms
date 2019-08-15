@@ -195,4 +195,36 @@ public class LinkedListTest {
         int actual = newLL.kthFromEnd(5);
         assertEquals(10, actual);
     }
+
+    @Test
+    public void canMerge2LLHappyPath(){
+        LinkedList<Integer> one = new LinkedList<>();
+        one.append(1);
+        one.append(3);
+        one.append(5);
+
+        LinkedList<Integer> two = new LinkedList<>();
+        two.append(2);
+        two.append(4);
+        two.append(6);
+
+        LinkedList<Integer> result = LinkedList.mergeLists(one, two);
+        System.out.println(result);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void canMergeUnevenLL(){
+        LinkedList<Integer> one = new LinkedList<>();
+        one.append(1);
+        one.append(3);
+        one.append(5);
+
+        LinkedList<Integer> two = new LinkedList<>();
+        two.append(2);
+        two.append(4);
+
+        LinkedList<Integer> result = LinkedList.mergeLists(one, two);
+        System.out.println(result);
+    }
+
 }
