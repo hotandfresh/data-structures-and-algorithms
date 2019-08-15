@@ -21,3 +21,8 @@ Time complexity is O(N) and space complexity is O(1).
 ![Merge Two Linked List Problem Domain](/assets/merge1.png)
 
 ![Merge Two Linked List Code](/assets/merge2.png)
+
+## Resources
+My October 2018 self who worked though this with a [friend](https://github.com/tara-johnson).
+
+![Our solution](/assets/merge3.png)
