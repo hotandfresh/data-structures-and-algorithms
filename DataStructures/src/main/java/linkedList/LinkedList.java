@@ -4,6 +4,37 @@ public class LinkedList<T> {
     public Node <T> head;
     public Node <T> current;
 
+    //merge 2 linked list
+    public static LinkedList mergeLists(LinkedList one, LinkedList two){
+
+        if(one.head != null && two.head == null){
+            return one;
+        } else if(one.head == null && two.head != null){
+            return two;
+        } else if(one.head == null && two.head == null){
+            throw new NullPointerException();
+        }
+
+        Node currentOne = one.head;
+        Node currentTwo = two.head;
+        Node runner1 = currentOne.next;
+        Node runner2 = currentTwo.next;
+
+        while(runner1 != null && runner2 != null){
+            currentOne.next = currentTwo;
+            currentOne = currentOne.next;
+            currentTwo = currentTwo.next;
+            currentOne.next = runner1;
+            currentOne = currentOne.next;
+            runner1 = currentOne.next;
+            runner2 = currentTwo.next;
+        }
+
+        currentOne.next = currentTwo;
+
+        return one;
+    }
+
     //Finds the Kth element from the end of a LL
     public T kthFromEnd(int k){
         int llLength = 0;
