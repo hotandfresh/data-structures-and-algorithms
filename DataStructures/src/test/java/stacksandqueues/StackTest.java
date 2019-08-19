@@ -58,7 +58,9 @@ public class StackTest {
         newStack.pop();
         newStack.pop();
         //if everything is popped off, there will be a null pointer exception
-        System.out.println("last pop " + newStack.top.data);
+        //there will be nothing left to pop off
+        newStack.pop();
+
     }
 
     @Test
@@ -72,4 +74,6 @@ public class StackTest {
 
         assertTrue(newStack.peek() == 40);
     }
+
+
 }
