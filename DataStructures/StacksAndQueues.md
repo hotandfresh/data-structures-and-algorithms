@@ -2,6 +2,7 @@
 
 ## Stacks
 [See the code](src/main/java/stacksandqueues/Stack.java)
+
 [See the tests](src/main/java/stacksandqueues/StackTest.java)
 
 A stack is a Last In, First Out (LIFO) data structure that can be visualized as a stack of plates. The last plate added, is the first one taken off.
