@@ -9,12 +9,14 @@ Implement a queue using two stacks.
 [See the Tests](src/test/java/stacksandqueues/PseudoQueueTest.java)
 
 ## Description
+The 2 stacks acts as buckets, where stack1 is the main bucket and stack2 is like a temporary bucket where nodes from stack1 will be placed during the dequeue process.
 
-This solution implements a 4 pointer strategy.  For each linked list, a current reference pointer is set to the head and a runner reference pointer is set to the next node after current.
+_Enqueue_
+This method will add a node by pushing into stack1, the main bucket.  This method will only push items into stack1.
 
-The pointers are needed in order to move along the linked list.  They keep track of new bonds, and then reassigns the new current to the runners after the new bonds have been made.
+_Dequeue_
+stack2 is used as a temporary bucket to hold the nodes, so that the node at the bottom of stack1 can be reached.  That node is the node that was placed in first. Since this is a representation of a queue, that node at the bottom of stack1 needs to be removed first if it were to be dequeued. At the end of this process, everything will be popped and pushed back into stack1 from stack2 so that the order of the nodes stay the same.
 
-The two lists have been mutated in order to make 1 zipped list.
 
 ## Approach & Efficiency
 
