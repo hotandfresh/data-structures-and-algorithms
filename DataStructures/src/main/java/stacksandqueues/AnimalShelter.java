@@ -1,23 +1,31 @@
 package stacksandqueues;
 
-public class AnimalShelter<T> {
-    public Queue<T> queue;
+import java.io.InvalidObjectException;
 
-    public AnimalShelter(Queue<T> queue){
-        this.queue = queue;
+public class AnimalShelter<T> {
+    public Queue<T> dogQueue;
+    public Queue<T> catQueue;
+
+    public AnimalShelter(Queue<T> catQueue, Queue<T> dogQueue){
+        this.catQueue = catQueue;
+        this.dogQueue = dogQueue;
     }
 
-    public void enqueue(T data){
-        this.queue.enqueue(data);
+    public void enqueue(T animal){
+        if(animal.equals("cat")){
+            this.catQueue.enqueue(animal);
+        } else if(animal.equals("dog")){
+            this.dogQueue.enqueue(animal);
+        } else {
+            throw new IllegalArgumentException("This shelter only excepts dogs and cats");
+        }
     }
 
     public T dequeue(T pref){
-        while(this.queue.front != null){
-            if(pref.equals(this.queue.front.data)){
-                return this.queue.dequeue();
-            }
-
-            this.queue.front = this.queue.front.next;
+        if(pref.equals("cat")){
+            return this.catQueue.dequeue();
+        } else if(pref.equals("dog")){
+            return this.dogQueue.dequeue();
         }
         return null;
     }
