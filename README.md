@@ -9,6 +9,7 @@ This repo is a collection of data structures and algorithms
 3. [Kth From The End](DataStructures/KthFromTheEnd.md)
 4. [Merge Two Linked Lists](DataStructures/MergeTwoLinkedLists.md)
 5. [Pseudo Queue](DataStructures/PsuedoQueue.md)
+6. [FIFO Animal Shelter](DataStructures/FIFOAnimalShelter.md)
 
 
 ## Data Structures
