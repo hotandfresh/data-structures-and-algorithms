@@ -4,6 +4,10 @@
 
 Given a string, check if its brackets are balanced.
 
+[See the code](/Challenges/src/main/java/Challenges/MultiBracketValidation.java)
+
+[See the tests](/Challenges/src/main/java/Challenges/MultiBracketValidationTest.java)
+
 ## Approach & Efficiency
 
 This solution implements a hashmap that will store the opening brackets and its count.  Only one traversal is needed.  If the character is an opening brace, add it to the hashmap if it doesn't exist or increment its count if it exists.  If the character is a closing brace, decrement the count of its pair by one.
