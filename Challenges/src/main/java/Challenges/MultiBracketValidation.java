@@ -1,43 +1,31 @@
 package Challenges;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Stack;
 
 public class MultiBracketValidation {
     public boolean multiBracketValidation(String input) {
-        HashMap<Character, Integer> HM = new HashMap<>();
+        Stack<Character> stack = new Stack<>();
 
-        for (int i = 0; i < input.length(); i++) {
-            if (input.charAt(i) == ']' || input.charAt(i) == '}' || input.charAt(i) == ')') {
-                if (HM.containsKey('[') && input.charAt(i) == ']') {
-                    HM.put('[', HM.get('[') - 1);
-                } else if (HM.containsKey('{') && input.charAt(i) == '}') {
-                    HM.put('{', HM.get('{') - 1);
-                } else if (HM.containsKey('(') && input.charAt(i) == ')') {
-                    HM.put('(', HM.get('(') - 1);
+        for(int i = 0; i < input.length(); i++){
+            //put all open braces into the stack
+            if(input.charAt(i) == '(' || input.charAt(i) == '[' || input.charAt(i) == '{'){
+                stack.push(input.charAt(i));
+            } else if(input.charAt(i) == ')' || input.charAt(i) == ']' || input.charAt(i) == '}'){
+                //if it's a closing brace, pop the top of the stack and see if it's the matching open brace
+                char poppedBrace = stack.pop();
+                //carry on if it's the right pair
+                if(poppedBrace == '(' && input.charAt(i) == ')' ){
+                    continue;
+                } else if(poppedBrace == '[' && input.charAt(i) == ']'){
+                    continue;
+                } else if(poppedBrace == '{' && input.charAt(i) == '}'){
+                    continue;
                 } else {
+                    //if it isn't, then the string is not balanced
                     return false;
                 }
-            } else {
-
-                if (HM.containsKey('[') && input.charAt(i) == '[') {
-                    HM.put(input.charAt(i), HM.get(input.charAt(i)) + 1);
-                } else if (HM.containsKey('{') && input.charAt(i) == '{') {
-                    HM.put(input.charAt(i), HM.get(input.charAt(i)) + 1);
-                } else if (HM.containsKey('(') && input.charAt(i) == '(') {
-                    HM.put(input.charAt(i), HM.get(input.charAt(i)) + 1);
-                } else if (input.charAt(i) == '[' || input.charAt(i) == '{' || input.charAt(i) == '(') {
-                    HM.put(input.charAt(i), 1);
-                }
-            }
-        }
-
-        for (Map.Entry<Character, Integer> entry : HM.entrySet()) {
-            if (entry.getValue() != 0) {
-                return false;
             }
         }
         return true;
     }
-
 }

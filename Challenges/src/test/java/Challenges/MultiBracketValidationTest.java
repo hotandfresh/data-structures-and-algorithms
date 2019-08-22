@@ -62,4 +62,12 @@ public class MultiBracketValidationTest {
         assertFalse(result);
     }
 
+    @Test
+    public void canValidateStringsThatAreNotBalanced3(){
+        String testString = "{(})";
+        MultiBracketValidation mbv = new MultiBracketValidation();
+        boolean result = mbv.multiBracketValidation(testString);
+        assertFalse(result);
+    }
+
 }
