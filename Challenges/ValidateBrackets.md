@@ -2,16 +2,20 @@
 
 ## Challenge
 
-Given an array, reverse its contents. Do not use any built in reverse methods.
+Given a string, check if its brackets are balanced.
 
 ## Approach & Efficiency
 
-This solution implements a 2 pointer strategy.  One starts at the beginning of the array, and the other starts at the end of the array.  As long as the start pointer is not greater than the end pointer, swap the elements.
+This solution implements a hashmap that will store the opening brackets and its count.  Only one traversal is needed.  If the character is an opening brace, add it to the hashmap if it doesn't exist or increment its count if it exists.  If the character is a closing brace, decrement the count of its pair by one.
 
-The time efficiency for this solution is O(n log n) because half of the array is iterated at a time.
+At the end, iterate through the hashmap and if any value is not 0, meaning a bracket didn't find a pair, return false.
 
-The space efficiency for this solution is O(1) because the array is modified in place.
+Otherwise return true at the end because all braces have been matched.
+
+The time efficiency for this solution is O(n) because the entire string is traversed
+
+The space efficiency for this solution is O(n) because the entire string could be just opening brackets.
 
 ## Solution
 
-![reverse array picture](/assets/reverseAnArray.png)
+![reverse array picture](/assets/bracketValidation.png)
