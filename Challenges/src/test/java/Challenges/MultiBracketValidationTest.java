@@ -61,5 +61,5 @@ public class MultiBracketValidationTest {
         boolean result = mbv.multiBracketValidation(testString);
         assertFalse(result);
     }
-    
+
 }
