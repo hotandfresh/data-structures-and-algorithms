@@ -13,17 +13,16 @@ public class BinaryTreeTest {
     public void canInstantiateBT(){
       BinaryTree bt = new BinaryTree();
 
-      assertNull(bt);
+      assertNull(bt.root);
     }
 
     @Test
     public void canInstantiateBTWithASingleRootNode(){
         BinaryTree bt = new BinaryTree();
 
-        Node root = new Node(1);
-
-        assertNull(root.left);
-        assertNull(root.right);
+        bt.root = new Node(1);
+        assertNull(bt.root.left);
+        assertNull(bt.root.right);
     }
 
     @Test

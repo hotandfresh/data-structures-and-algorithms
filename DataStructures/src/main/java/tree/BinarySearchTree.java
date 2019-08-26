@@ -1,8 +1,11 @@
 package tree;
 
-public class BinarySearchTree {
+public class BinarySearchTree extends BinaryTree<Integer>{
+    public BinarySearchTree(){
+        super();
+    }
 
-    public void add(Node root, Node newNode){
+    public void add(Node<Integer> root, Node<Integer> newNode){
         if(root == null){
             root = newNode;
         }
@@ -22,7 +25,7 @@ public class BinarySearchTree {
         }
     }
 
-    public boolean contains(Node root, int value){
+    public boolean contains(Node<Integer> root, int value){
         if(root == null){
             return false;
         }
