@@ -1,0 +1,40 @@
+package tree;
+
+public class BinarySearchTree {
+
+    public void add(Node root, Node newNode){
+        if(root == null){
+            root = newNode;
+        }
+
+        if(newNode.data <= root.data){
+            if(root.left == null){
+                root.left = newNode;
+            } else {
+                add(root.left, newNode);
+            }
+        } else {
+            if(root.right == null){
+                root.right = newNode;
+            } else {
+                add(root.right, newNode);
+            }
+        }
+    }
+
+    public boolean contains(Node root, int value){
+        if(root == null){
+            return false;
+        }
+
+        if(value == root.data){
+            return true;
+        }
+
+        if(value <= root.data){
+            return contains(root.left, value);
+        }
+
+        return contains(root.right, value);
+    }
+}
