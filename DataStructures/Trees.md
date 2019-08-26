@@ -10,9 +10,9 @@ A binary tree is a data structure where each node can have up to 2 children node
 
 ---
 ## Binary Search Tree (BST)
-[See the code](src/main/java/trees/BinarySearchTree.java)
+[See the code](src/main/java/tree/BinarySearchTree.java)
 
-[See the tests](src/main/java/trees/BinarySearchTreeTest.java)
+[See the tests](src/main/java/tree/BinarySearchTreeTest.java)
 
 A binary search tree is a type of binary tree, where values to the left of the root are smaller and values to the right of the root are larger.
 
