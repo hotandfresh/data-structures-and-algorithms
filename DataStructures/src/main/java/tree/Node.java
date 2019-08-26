@@ -1,11 +1,11 @@
 package tree;
 
-public class Node {
-    Node left;
-    Node right;
-    int data;
+public class Node<T> {
+    Node<T> left;
+    Node<T> right;
+    T data;
 
-    public Node(int data){
+    public Node(T data){
         this.data = data;
     }
 

@@ -13,7 +13,7 @@ public class BinaryTreeTest {
     public void canInstantiateBT(){
       BinaryTree bt = new BinaryTree();
 
-      assertNull(bt);
+      assertNull(bt.root);
     }
 
     @Test

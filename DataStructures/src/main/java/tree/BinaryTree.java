@@ -2,11 +2,21 @@ package tree;
 
 import java.util.ArrayList;
 
-public class BinaryTree {
-    ArrayList<Integer> result = new ArrayList<>();
+public class BinaryTree<T> {
+    Node<T> root;
 
-    //pre - left, right, root
-    public ArrayList<Integer> preOrder(Node root){
+    public BinaryTree(){
+        this.root = null;
+    }
+
+    public BinaryTree(Node<T> root){
+        this.root = root;
+    }
+
+    ArrayList<T> result = new ArrayList<>();
+
+    //pre - root, left, right
+    public ArrayList<T> preOrder(Node<T> root){
         result.add(root.data);
         if(root.left != null){
             preOrder(root.left);
@@ -20,7 +30,7 @@ public class BinaryTree {
     }
 
     //in - left, root, right
-    public ArrayList<Integer> inOrder(Node root){
+    public ArrayList<T> inOrder(Node<T> root){
         if(root.left != null){
             inOrder(root.left);
         }
@@ -35,7 +45,7 @@ public class BinaryTree {
     }
 
     //post - left, right, root
-    public ArrayList<Integer> postOrder(Node root){
+    public ArrayList<T> postOrder(Node<T> root){
         if(root.left != null){
             postOrder(root.left);
         }

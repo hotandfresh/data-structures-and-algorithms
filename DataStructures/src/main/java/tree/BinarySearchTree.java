@@ -1,6 +1,9 @@
 package tree;
 
-public class BinarySearchTree {
+public class BinarySearchTree extends BinaryTree<Integer>{
+    public BinarySearchTree(){
+        super();
+    }
 
     public void add(Node root, Node newNode){
         if(root == null){
