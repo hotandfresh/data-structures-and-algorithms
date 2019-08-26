@@ -32,6 +32,7 @@ _add_: This recursive method adds a node to the bst according to the rule where 
 
 _contains_: This recursive method determines if a value is in a binary search tree.  It compares the value against the root's value.  If it's less, then call the method again with the node to the left of root to travel further down the left side of the tree.  If it's greater, then call the method again with the node to the right of the root to travel further down the right side of the tree.
 
+The space and time complexity of both methods is O(N) because every node is visited. Technically, for add, N is divided by 2, but the constant is ignored.  Since recursion is used, all nodes will be added to the call stack when doing all the comparisons.
 
 ## Resources
 Many thanks to the Hacker Rank [tutorial](https://www.youtube.com/watch?v=oSWTXtMglKE&t=313s)
