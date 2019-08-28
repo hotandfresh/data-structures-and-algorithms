@@ -120,4 +120,31 @@ public class BinaryTreeTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void canTravelBreadthFirst(){
+        BinaryTree bt = new BinaryTree();
+
+        Node root = new Node(1);
+
+        Node nodeA = new Node(2);
+        Node nodeB = new Node(3);
+        Node nodeC = new Node(4);
+        Node nodeD = new Node(5);
+        Node nodeE = new Node(6);
+        Node nodeF = new Node(7);
+
+        //connect the nodes with each other:
+        root.left = nodeA;
+        root.right = nodeB;
+        nodeA.left = nodeC;
+        nodeA.right = nodeD;
+        nodeB.left = nodeE;
+        nodeB.right = nodeF;
+
+        ArrayList actual = bt.breadthFirstSearch(root);
+        ArrayList expected = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+
+        assertEquals(expected, actual);
+    }
 }
