@@ -42,6 +42,16 @@ public class Queue<T> {
     }
 
     public T peek(){
+        if(front.data == null){
+            return null;
+        }
         return front.data;
+    }
+
+    public boolean isEmpty(){
+        if(front == null && tail == null){
+            return true;
+        }
+        return false;
     }
 }

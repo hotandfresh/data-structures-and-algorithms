@@ -1,5 +1,7 @@
 package tree;
 
+import stacksandqueues.Queue;
+
 import java.util.ArrayList;
 
 public class BinaryTree<T> {
@@ -14,6 +16,26 @@ public class BinaryTree<T> {
     }
 
     ArrayList<T> result = new ArrayList<>();
+
+    //breadth first search
+    public ArrayList<T> breadthFirstSearch(Node<T> root){
+        Queue<Node> Q = new Queue<>();
+
+        Q.enqueue(root);
+        while(!Q.isEmpty()){
+            Node<Integer> temp = Q.dequeue();
+            result.add((T)temp.data);
+            System.out.println(temp.data);
+            if(temp.left != null){
+                Q.enqueue(temp.left);
+            }
+            if(temp.right != null){
+                Q.enqueue(temp.right);
+            }
+        }
+
+        return result;
+    }
 
     //pre - root, left, right
     public ArrayList<T> preOrder(Node<T> root){
