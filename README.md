@@ -12,6 +12,7 @@ This repo is a collection of data structures and algorithms
 6. [FIFO Animal Shelter](DataStructures/FIFOAnimalShelter.md)
 7. [Validate Brackets](Challenges/ValidateBrackets.md)
 8. [Fizz Buzz Tree](DataStructures/FizzBuzzTree.md)
+9. [Breadth First Traversal of a Binary Tree](DataStructures/BreadthFirstTraversal.md)
 
 ## Data Structures
 1. [Linked Lists](DataStructures/LinkedList.md)
