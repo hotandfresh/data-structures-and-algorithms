@@ -147,4 +147,26 @@ public class BinaryTreeTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void canFindMax(){
+        BinaryTree bt = new BinaryTree();
+
+        Node root = new Node(2);
+
+        Node nodeA = new Node(1);
+        Node nodeB = new Node(3);
+        Node nodeC = new Node(5);
+        Node nodeD = new Node(11);
+
+        //connect the nodes with each other:
+        root.left = nodeA;
+        root.right = nodeB;
+        nodeA.left = nodeC;
+        nodeA.right = nodeD;
+
+        int result = bt.findMax(root);
+
+        assertEquals(result, 11);
+    }
 }
