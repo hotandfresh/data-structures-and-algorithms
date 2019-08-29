@@ -13,6 +13,7 @@ This repo is a collection of data structures and algorithms
 7. [Validate Brackets](Challenges/ValidateBrackets.md)
 8. [Fizz Buzz Tree](DataStructures/FizzBuzzTree.md)
 9. [Breadth First Traversal of a Binary Tree](DataStructures/BreadthFirstTraversal.md)
+10. [Find Max Value of a Binary Tree](DataStructures/MaxValueOfABT.md)
 
 ## Data Structures
 1. [Linked Lists](DataStructures/LinkedList.md)
