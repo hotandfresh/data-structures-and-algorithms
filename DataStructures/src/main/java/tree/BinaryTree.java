@@ -17,6 +17,29 @@ public class BinaryTree<T> {
 
     ArrayList<T> result = new ArrayList<>();
 
+    //finds the max value stored in a BT
+    public int findMax(Node<Integer> root){
+        if(root == null){
+            return 0;
+        }
+
+        int currentVal = root.data;
+
+        int left = findMax(root.left);
+
+        int right = findMax(root.right);
+
+        if(left > currentVal){
+            currentVal = left;
+        }
+
+        if(right > currentVal){
+            currentVal = right;
+        }
+
+        return currentVal;
+    }
+
     //breadth first search
     public ArrayList<T> breadthFirstSearch(Node<T> root){
         Queue<Node> Q = new Queue<>();
