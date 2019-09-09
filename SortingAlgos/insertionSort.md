@@ -14,7 +14,6 @@ There are 2 pointers, i and j.  While i is less than the length of the array, do
     - the logic in the while loop is the one that keeps comparing the number to the one to its left
 - insert back the temp number
 
-
 ## Approach & Efficiency
 Space Complexity is O(1) because the array is manipulated and no extra space is created.
 
