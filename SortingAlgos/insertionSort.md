@@ -6,7 +6,7 @@ This sorting algorithm starts from the left side of the array and works towards 
 [See the Code](src/main/java/SortingAlgos/InsertionSort.java)
 
 
-[See the Tests](src/main/java/SortingAlgos/InsertionSortTest.java)
+[See the Test](test/main/java/SortingAlgos/InsertionSortTest.java)
 
 
 ## Description
