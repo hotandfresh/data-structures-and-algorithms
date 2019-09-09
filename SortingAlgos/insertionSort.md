@@ -3,6 +3,12 @@
 ## Summary
 This sorting algorithm starts from the left side of the array and works towards the right. Each number is compared to the one on its left. This will sort numbers in ascending order.
 
+[See the Code](src/main/java/SortingAlgos/InsertionSort.java)
+
+
+[See the Tests](src/main/java/SortingAlgos/InsertionSortTest.java)
+
+
 ## Description
 There are 2 pointers, i and j.  While i is less than the length of the array, do the following logic:
 
