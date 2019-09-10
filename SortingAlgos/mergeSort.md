@@ -1,7 +1,7 @@
 # Merge Sort
 
 ## Summary
-The merge sort implemented here is a 
+The merge sort implemented here is a recursive solution. This strategy sorts the left half and then sorts the right half.  Both halves are then merged in sorted order.
 
 [See the Code](src/main/java/SortingAlgos/mergeSort.java)
 
@@ -10,20 +10,14 @@ The merge sort implemented here is a
 
 
 ## Description
-There are 2 pointers, i and j.  While i is less than the length of the array, do the following logic:
+This divide and conquer strategy requires splitting the array in half with a left pointer that starts at the beginning and a right pointer that starts at the end.  If at any point the left is greater than the right, we are done.
 
-- set j to be one less than i
-- set a variable temp to be equal to the number at array index i
-- while j is greater than 0 and the value of temp is less than the value to its left, commence swapping:
-    - move the value that was on the left to where we currently are in the array
-    - decrement j
-    - the logic in the while loop is the one that keeps comparing the number to the one to its left
-- insert back the temp number
+During this process, a recursive method is called that will sort those halves.  This method takes in the array, the left starting positing and the right ending position.  It's difficult to merge in place, so a temp array is used. Within this method is a while loop that will swap the elements from the left and ride side if they are not in the correct order. The arraycopy method copies the remaining elements from one array into the other.  These remaining numbers are ones in the correct order and no swapping is needed for them.
 
 ## Approach & Efficiency
-Space Complexity is O(1) because the array is manipulated and no extra space is created.
+Space Complexity is O(n) because extra space is needed the items are copied into a new array, merge them and copy them back.
 
-Time Complexity is O(N) because the last number in the array could be the smallest and it would be compared with every number to its left.
+Time Complexity is O(n log n) because the array is broken into halves and those halves are sorted.
 
 ## Resources
-[Insertion Sort in 2 Mins](https://www.youtube.com/watch?v=JU767SDMDvA)
+Many thanks to the [HackerRank Merge Sort](https://www.youtube.com/watch?v=KF2j-9iSf4Q&t=229s)
