@@ -21,4 +21,6 @@ This repo is a collection of data structures and algorithms
 3. [Binary Tree and Binary Search Tree](DataStructures/Trees.md)
 
 ## Sorting Algorithms
-
+1. [Insertion](SortingAlgos/insertionSort.md)
+2. [Merge](SortingAlgos/mergeSort.md)
+3. [Quick](SortingAlgos/QuickSort.md)
