@@ -8,6 +8,8 @@ This sorting algorithm starts utilizes a pivot point.  Numbers less than the piv
 
 [See the Test](src/test/java/SortingAlgos/QuickSortTest.java)
 
+[See the Blog/Teaching Presentation Outline](QuickSortPresentation.md)
+
 
 ## Description
 Pick a pivot. The solution picks a pivot that's the middle index. Walk through the array from the left and from the right.  During this walk, swap the elements if the element on the left is greater and if the element on the right is smaller.
