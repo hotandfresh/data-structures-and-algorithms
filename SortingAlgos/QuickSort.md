@@ -14,10 +14,13 @@ Pick a pivot. The solution picks a pivot that's the middle index. Walk through t
 
 Repeat this process on the two halves of the array, and then on the halves of those halves.
 
-## Approach & Efficiency
-Space Complexity 
+## Image
+![Insertion Sort](/assets/quickSort.png)
 
-Time Complexity is 
+## Approach & Efficiency
+Space Complexity O(n)
+
+Time Complexity is n log n
 
 ## Resources
 Many thanks to the [Quick Sort Hacker Rank tutorial](https://www.youtube.com/watch?v=SLauY6PpjW4&t=318s)
