@@ -58,7 +58,7 @@ public class Hashtable {
 
         //if there's something at that index, look until the key is found
         while(current != null){
-            if(current.key == word){
+            if(current.key.equals(word)){
                 return true;
             }
             current = current.next;
