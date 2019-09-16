@@ -4,6 +4,10 @@ A hashtable is a data structure that maps keys to values.  Keys are hash and tha
 ## Challenge
 Implement a hashtable that can hash a key, add a key value pair, find the value for a key, and determines if a key exists.
 
+[See the Code](src/main/java/linkedList/Hashtable.java)
+
+[See the Tests](src/test/java/linkedList/HashtableTest.java)
+
 ## Approach & Efficiency
 Hashtables have a space efficiency of O(n) because space is used to store the key value pairs. 
 
