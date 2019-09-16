@@ -62,4 +62,13 @@ public class HashtableTest {
         assertTrue(min <= catHash && catHash <= max);
         assertTrue((min <= xzvczxvzxcvzxcvcxzVAL) && (xzvczxvzxcvzxcvcxzVAL <= max));
     }
+
+    @Test
+    public void canCheckIfAKeyExists(){
+        Hashtable ht = new Hashtable();
+        ht.add("cat", 50);
+
+        assertTrue(ht.contains("cat"));
+        assertFalse(ht.contains("tacocat"));
+    }
 }
