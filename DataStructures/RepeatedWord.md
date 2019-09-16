@@ -3,6 +3,10 @@
 ## Challenge
 Return the first word that is repeated in a lengthy string.
 
+[See the Code](src/main/java/hashtable/RepeatedWord.java)
+
+[See the Tests](src/test/java/hashtable/RepeatedWordTest.java)
+
 ## Approach & Efficiency
 Space complexity is O(n) because all the words will be stored if they were all unique.
 
