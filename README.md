@@ -14,6 +14,7 @@ This repo is a collection of data structures and algorithms
 8. [Fizz Buzz Tree](DataStructures/FizzBuzzTree.md)
 9. [Breadth First Traversal of a Binary Tree](DataStructures/BreadthFirstTraversal.md)
 10. [Find Max Value of a Binary Tree](DataStructures/MaxValueOfABT.md)
+11. [Repeated Word](DataStructures/RepeatedWord.md)
 
 ## Data Structures
 1. [Linked Lists](DataStructures/LinkedList.md)
