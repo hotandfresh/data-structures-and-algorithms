@@ -19,6 +19,7 @@ This repo is a collection of data structures and algorithms
 1. [Linked Lists](DataStructures/LinkedList.md)
 2. [Stacks and Queues](DataStructures/StacksAndQueues.md)
 3. [Binary Tree and Binary Search Tree](DataStructures/Trees.md)
+4. [HashTable](DataStructures/Hashtable.md)
 
 ## Sorting Algorithms
 1. [Insertion](SortingAlgos/insertionSort.md)
