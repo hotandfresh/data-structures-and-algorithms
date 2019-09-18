@@ -19,7 +19,7 @@ Time Complexity is O(n) because every index of the left hashmap is checked again
 Space Complexity is O(n) because a new structure is used to store everything from the left table.
 
 ## Solution
-![left join picture](assets/leftJoin.png)
+![left join picture](/assets/leftJoin.png)
 
 ## Methods
 ```leftJoin```: takes in two hashtables and returns a list of lists of all values found in the left table along with the value of the right hashtable if the key is the same.
