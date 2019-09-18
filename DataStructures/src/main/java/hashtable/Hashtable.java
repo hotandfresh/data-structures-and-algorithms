@@ -1,6 +1,6 @@
 package hashtable;
 
-public class Hashtable {
+public class Hashtable<T> {
 
     public Node[] HashArray;
 
@@ -21,7 +21,7 @@ public class Hashtable {
     }
 
     //add a string to the hashtable
-    public void add(String word, int value){
+    public void add(String word, T value){
         Node node = new Node(word, value);
         int index = hash(word);
         //chain the nodes if there's a collision
@@ -33,18 +33,18 @@ public class Hashtable {
     }
 
     //find the value stored for a key
-    public int get(String word){
+    public T get(String word){
         int index = hash(word);
         Node current = HashArray[index];
         //if there are multiple nodes, keep searching till the key is found
         while(current != null){
             if(current.key == word){
-                return current.value;
+                return (T)current.value;
             }
             current = current.next;
         }
 
-        return current.value;
+        return (T)current.value;
     }
 
     //determines if a key is in a hashtable
