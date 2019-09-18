@@ -1,11 +1,11 @@
 package hashtable;
 
-public class Node {
-    public Node next;
-    public String key;
-    public int value;
+public class Node<T> {
+    public Node<T> next;
+    public T key;
+    public T value;
 
-    public Node(String key, int value){
+    public Node(T key, T value){
         this.key = key;
         this.value = value;
     }

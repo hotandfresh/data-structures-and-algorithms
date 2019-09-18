@@ -17,9 +17,8 @@ public class HashtableTest {
     public void canRetrieveValueFromKey(){
         Hashtable ht = new Hashtable();
         ht.add("cat", 50);
-        int expected = ht.get("cat");
 
-        assertEquals(expected, 50);
+        assertEquals(ht.get("cat"), 50);
     }
 
     @Test(expected = NullPointerException.class)
