@@ -3,6 +3,7 @@ package hashtable;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
@@ -29,7 +30,19 @@ public class LeftJoinTest {
         ArrayList<ArrayList<String>> result = lj.leftJoin(ht1, ht2);
         System.out.println(result);
         ArrayList<ArrayList<String>> expected = new ArrayList<>();
-        assertArrayEquals(expected, result);
+        ArrayList<String> individualResults1 = new ArrayList<>(Arrays.asList("fond", "enamored", "averse"));
+        ArrayList<String> individualResults2 = new ArrayList<>(Arrays.asList("guide", "user", "follow"));
+        ArrayList<String> individualResults3 = new ArrayList<>(Arrays.asList("wrath", "anger", "delight"));
+        ArrayList<String> individualResults4 = new ArrayList<>(Arrays.asList("outfit", "garb", "NULL"));
+        ArrayList<String> individualResults5 = new ArrayList<>(Arrays.asList("diligent", "employment", "idle"));
+
+        expected.add(individualResults1);
+        expected.add(individualResults2);
+        expected.add(individualResults3);
+        expected.add(individualResults4);
+        expected.add(individualResults5);
+
+        assertArrayEquals(expected.get(1), result.get(1));
     }
 
 }
