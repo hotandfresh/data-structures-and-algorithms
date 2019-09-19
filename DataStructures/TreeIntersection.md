@@ -12,6 +12,9 @@ Time Complexity is O(n) because every node needs to be visited and compared.
 
 Space Complexity is O(n) because an additional list was used to store nodes found in both trees. Every node from one tree could have been found in the other tree. 
 
+## Solution
+![tree intersection](/assets/treeIntersection.png)
+
 ## Methods
 ```treeIntersection```: takes in two binary trees and its respective root nodes. It utilizes the the inOrder traversal to check all the nodes of both trees. Then both array lists are checked against one another. If there are common values, put them in the third array list, which is the result that is returned from the method.
 
