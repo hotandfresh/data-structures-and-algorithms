@@ -9,6 +9,9 @@ public class Graph {
 
     //gets all the nodes in the graph
     public ArrayList<Node> getNodes() {
+        if(allNodes.size() == 0){
+            return null;
+        }
         return allNodes;
     }
 
