@@ -9,13 +9,17 @@ Implement a graph.
 [See the Tests](src/test/java/graph/GraphTest.java)
 
 ## Approach & Efficiency
+This implementation utilizes a number of array lists to store information such as all the edges connected to a node and all the nodes in a graph.  Therefore, space complexity is O(N)
+
+Time complexity is O(N) because a check is done to see if two nodes exist in a graph before an edge is added.
+ 
 
 ## Classes
 - Node: the graph implemented consists of nodes. nodes have a value, a flag indicating if it has been visited and a list of edges connected to it.
 
 - Edge: an edge will have a node attach to it and a weight
 
-- Graph: 
+- Graph: each graph will come with a list of all the nodes in it.
 
 ## Methods
 ```addNode```: add a new node to the graph. takes in the value of that node and returns the added node.
