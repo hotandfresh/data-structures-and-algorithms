@@ -10,6 +10,12 @@ Implement a graph.
 
 ## Approach & Efficiency
 
+## Classes
+- Node: the graph implemented consists of nodes. nodes have a value, a flag indicating if it has been visited and a list of edges connected to it.
+
+- Edge: an edge will have a node attach to it and a weight
+
+- Graph: 
 
 ## Methods
 ```addNode```: add a new node to the graph. takes in the value of that node and returns the added node.

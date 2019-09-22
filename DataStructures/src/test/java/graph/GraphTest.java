@@ -48,7 +48,6 @@ public class GraphTest {
         assertTrue(graph.allNodes.contains(node4));
     }
 
-    //TODO
     @Test
     public void canGetAllNeighbors(){
         Graph graph = new Graph();
@@ -66,16 +65,36 @@ public class GraphTest {
         graph.addEdge(node1, node3, 100);
         graph.addEdge(node1, node4, 1000);
 
-        for(Edge edge : graph.getNeighbors(node1)){
-            System.out.println(graph.getNeighbors(edge));
-
-        }
+        assertEquals(graph.getNeighbors(node1).get(0).node.value,2 );
+        assertEquals(graph.getNeighbors(node1).get(1).node.value,3 );
+        assertEquals(graph.getNeighbors(node1).get(2).node.value,4 );
     }
 
-    //TODO
     @Test
     public void canReturnNeighborsWithWeight(){
+        Graph graph = new Graph();
+        Node node1 = new Node(1);
+        Node node2 = new Node(2);
+        Node node3 = new Node(3);
+        Node node4 = new Node(4);
 
+        graph.addNode(node1);
+        graph.addNode(node2);
+        graph.addNode(node3);
+        graph.addNode(node4);
+
+        graph.addEdge(node1, node2, 10);
+        graph.addEdge(node1, node3, 100);
+        graph.addEdge(node1, node4, 1000);
+
+        assertEquals(graph.getNeighbors(node1).get(0).node.value,2 );
+        assertEquals(graph.getNeighbors(node1).get(0).weight,10 );
+
+        assertEquals(graph.getNeighbors(node1).get(1).node.value,3 );
+        assertEquals(graph.getNeighbors(node1).get(1).weight,100 );
+
+        assertEquals(graph.getNeighbors(node1).get(2).node.value,4 );
+        assertEquals(graph.getNeighbors(node1).get(2).weight,1000 );
     }
 
     @Test
@@ -95,10 +114,18 @@ public class GraphTest {
         assertEquals(graph.size(), 4);
     }
 
-    //TODO
     @Test
     public void canReturnGraphWithOneNodeAndOneEdge(){
+        Graph graph = new Graph();
 
+        Node node1 = new Node(1);
+
+        graph.addNode(node1);
+
+        graph.addEdge(node1, node1, 1);
+
+        assertEquals(graph.getNeighbors(node1).get(0).node.value,1 );
+        assertEquals(graph.getNeighbors(node1).get(0).weight,1 );
     }
 
     @Test
