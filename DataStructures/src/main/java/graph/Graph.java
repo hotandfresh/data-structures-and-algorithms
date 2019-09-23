@@ -2,7 +2,10 @@ package graph;
 
 import org.checkerframework.checker.units.qual.A;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Graph {
     public ArrayList<Node> allNodes;
@@ -48,6 +51,28 @@ public class Graph {
     //returns the total number of nodes in the graph
     public int size(){
         return this.allNodes.size();
+    }
+
+    //Breadth first traversal
+    public ArrayList<Node> BFS(Node node){
+        ArrayList<Node> result = new ArrayList<>();
+        Queue<Node> q = new LinkedList<>();
+        q.add(node);
+
+        while(!q.isEmpty()){
+            Node front = q.poll();
+            front.visited = true;
+            result.add(front);
+
+            for(Edge edge : front.edges){
+                if(!edge.node.visited){
+                    edge.node.visited = true;
+                    q.add(edge.node);
+                }
+            }
+        }
+
+        return result;
     }
 
 }

@@ -3,7 +3,7 @@ package graph;
 import java.util.ArrayList;
 
 public class Node {
-    public Boolean visited;
+    public Boolean visited = false;
     public int value;
     public ArrayList<Edge> edges;
 
