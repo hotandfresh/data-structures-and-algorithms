@@ -32,8 +32,8 @@ Time complexity is O(N) because a check is done to see if two nodes exist in a g
 
 ```size```: returns the total number of nodes in the graph.
 
-```BFS```: breadth first traversal of a graph. takes in a node and returns all the nodes found in the graph. Time and space complexity is O(N) because each node is added.
-
 ## Acknowledgements
 [HackerRank Tutorial](https://www.youtube.com/watch?v=zaBhtODEL0w&t=263s)
+
+Implementing a queue as an interface was taken from [here](https://stackoverflow.com/questions/4626812/how-do-i-instantiate-a-queue-object-in-java).
 
