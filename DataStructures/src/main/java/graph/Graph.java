@@ -1,8 +1,5 @@
 package graph;
 
-import org.checkerframework.checker.units.qual.A;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -64,7 +61,8 @@ public class Graph {
             front.visited = true;
             result.add(front);
 
-            for(Edge edge : front.edges){
+            for(Edge edge : (ArrayList<Edge>)front.edges){
+//                Edge e = (Edge) edge;
                 if(!edge.node.visited){
                     edge.node.visited = true;
                     q.add(edge.node);

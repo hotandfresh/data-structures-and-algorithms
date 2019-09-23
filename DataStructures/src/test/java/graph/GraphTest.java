@@ -3,7 +3,6 @@ package graph;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
@@ -29,7 +28,8 @@ public class GraphTest {
         graph.addNode(node2);
 
         graph.addEdge(node1, node2, 1);
-        assertEquals(node1.edges.get(0).weight, 1);
+        Edge actual = (Edge)node1.edges.get(0);
+        assertEquals(actual.getNode(), node2);
     }
 
     @Test
