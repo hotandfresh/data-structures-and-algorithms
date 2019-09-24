@@ -26,7 +26,8 @@ public class GetEdgeTest {
 
         graph.addEdge(node1, node2, 82);
         graph.addEdge(node2, node3, 50);
-        graph.addEdge(node4, node5, 100);
+        graph.addEdge(node3, node4, 100);
+        graph.addEdge(node4, node5, 200);
 
         GetEdge ge = new GetEdge();
         ArrayList<String> cities = new ArrayList<>(Arrays.asList("CHI", "SEA", "PDX", "CLE", "SFO"));
