@@ -15,12 +15,15 @@ This repo is a collection of data structures and algorithms
 9. [Breadth First Traversal of a Binary Tree](DataStructures/BreadthFirstTraversal.md)
 10. [Find Max Value of a Binary Tree](DataStructures/MaxValueOfABT.md)
 11. [Repeated Word](DataStructures/RepeatedWord.md)
+12. [Breadth First Traversal of a Graph](/DataStructures/BreadthFirstTraversalGraph.md)
+13. [Get Edge](/DataStructures/GetEdge.md)
 
 ## Data Structures
 1. [Linked Lists](DataStructures/LinkedList.md)
 2. [Stacks and Queues](DataStructures/StacksAndQueues.md)
 3. [Binary Tree and Binary Search Tree](DataStructures/Trees.md)
 4. [HashTable](DataStructures/Hashtable.md)
+5. [Graph](DataStructures/Graph.md)
 
 ## Sorting Algorithms
 1. [Insertion](SortingAlgos/insertionSort.md)
