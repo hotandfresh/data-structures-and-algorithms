@@ -17,6 +17,7 @@ This repo is a collection of data structures and algorithms
 11. [Repeated Word](DataStructures/RepeatedWord.md)
 12. [Breadth First Traversal of a Graph](/DataStructures/BreadthFirstTraversalGraph.md)
 13. [Get Edge](/DataStructures/GetEdge.md)
+14. [Depth First Search of a Graph](/DataStructures/DepthFirstSearchGraph.md)
 
 ## Data Structures
 1. [Linked Lists](DataStructures/LinkedList.md)
